@@ -1,0 +1,8 @@
+compilation : 
+
+gcc test.c
+gcc -shared -fPIC -o safeLib.so safeLib.c -ldl
+
+execution :
+
+LD_PRELOAD=$PWD/safeLib.so ./a.out
