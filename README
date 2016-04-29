@@ -5,4 +5,6 @@ gcc -shared -fPIC -o safeLib.so safeLib.c -ldl
 
 execution :
 
-LD_PRELOAD=$PWD/safeLib.so ./a.out
+once the safeLib.so is generated using the above command, place it in the directory where the executable exists and run using :
+
+	LD_PRELOAD=$PWD/safeLib.so ./a.out
