@@ -1,10 +1,15 @@
-compilation : 
+CSE 545 : Software security
 
-gcc test.c
-gcc -shared -fPIC -o safeLib.so safeLib.c -ldl
+Vignesh Jayabalan and Vikash Bajaj
+1207606773 and 1209381872
 
-execution :
+Compilation : 
 
-once the safeLib.so is generated using the above command, place it in the directory where the executable exists and run using :
+	1) Compiling the vulnerable program : gcc <name of the file>
+	2) Compiling the Safe Library : gcc -shared -fPIC -o safeLib.so safeLib.c -ldl
+
+Execution :
+
+Once the "safeLib.so" is generated using the above command, place it in the directory where the executable exists and run using:
 
 	LD_PRELOAD=$PWD/safeLib.so ./a.out
